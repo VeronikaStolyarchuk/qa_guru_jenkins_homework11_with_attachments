@@ -1,5 +1,8 @@
 package tests;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pages.PracticeFormPage;
 import pages.components.ResultPracticeFormTable;
@@ -8,6 +11,11 @@ public class PracticeFormTest extends BaseTest {
 
     PracticeFormPage practiceFormPage = new PracticeFormPage();
     ResultPracticeFormTable resultPracticeFormTable = new ResultPracticeFormTable();
+
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
 
     @Test
     void successfulPracticeForm(){
