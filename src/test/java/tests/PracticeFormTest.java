@@ -12,11 +12,6 @@ public class PracticeFormTest extends BaseTest {
     PracticeFormPage practiceFormPage = new PracticeFormPage();
     ResultPracticeFormTable resultPracticeFormTable = new ResultPracticeFormTable();
 
-    @BeforeEach
-    void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
-
     @Test
     void successfulPracticeForm(){
 

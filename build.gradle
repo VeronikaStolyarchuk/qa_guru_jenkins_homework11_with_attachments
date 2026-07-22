@@ -30,6 +30,7 @@ dependencies {
     testImplementation 'org.slf4j:slf4j-simple:2.0.17'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'io.qameta.allure:allure-selenide:2.34.0'
+    testImplementation 'io.qameta.allure:allure-junit5:2.33.0'
 }
 
 tasks.withType(Test) {
